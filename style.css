@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    width: 60vw;
+    max-height: 600px;
+    display: flex;
+    border-radius: 4%;
+    flex-direction: column;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: grid;
+    align-content: center;
+}
+
+.img>img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.content>* {
+    margin-bottom: 1rem;
+}
+
+.content>span {
+    color: hsl(212, 21%, 14%);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+}
+
+.content>h1 {
+    font-family: "Fraunces", serif;
+    color: hsl(212, 21%, 14%);
+}
+
+.content>p {
+    font-family: "Montserrat", sans-serif;
+    color: hsl(228, 12%, 48%);
+}
+
+.price {
+    display: flex;
+    /* justify-content: center; */
+}
+
+.discount-price {
+    display: inline;
+    color: hsl(158, 36%, 37%);
+    font-size: 1.5rem;
+    font-family: "Fraunces", serif;
+    font-weight: bold;
+}
+
+.actual-price {
+    text-align: center;
+    line-height: 1.5rem;
+    margin-left: 1.5rem;
+    text-decoration: line-through;
+    display: inline;
+    color: hsl(228, 12%, 48%);
+}
+
+.btn {
+    background-color: hsl(158, 36%, 37%);
+    border: none;
+    padding: 0.6rem;
+    width: 80%;
+    margin: 1rem;
+    border-radius: 7px;
+    color: var(--cream);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn>span {
+    margin-left: 0.5rem;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        background: hsl(30, 38%, 92%);
+    }
+    .container {
+        flex-direction: row;
+        overflow: hidden;
+    }
+    .img {
+        position: relative;
+        top: -10%;
+        flex: 1;
+        height: 100%;
+        width: 200%;
+    }
+    .content {
+        flex: 1;
+    }
+}
